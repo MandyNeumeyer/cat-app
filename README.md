@@ -7,6 +7,7 @@ fetch the data from the cat fact api `'https://catfact.ninja/fact'`
 **Requirements**
 
 - split you app into components (`<Loading/>, <CatFact/>`)
+- use conditional rendering to switch between your components (`<Loading/>, <CatFact/>`) depending on the loading state
 - fetch the first cat fact after the app has loaded with the help of `useEffect`
 - fetch the next cat fact after the user has clicked the button to get a new cat fact
 
