@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+.CatFacts {
+    margin: 0 auto;
+    width: 50%;
+    font-family: 'Poppins', sans-serif;
+
+    h1 {
+        margin-top: 5rem;
+    }
+
+    img {
+        position: relative;
+        left: -1.2rem;
+    }
+
+    .factBox {
+        margin: 1.5rem 0rem;
+    }    
+
+    button {
+        padding: 0.5rem 1rem;
+        background-color: purple;
+        border-radius: 0.5rem;
+        outline:none;
+        border: 2px solid rgb(36, 1, 36);
+        color: yellow;
+        font-weight: bold;
+        &:hover {
+            background-color: rgb(142, 7, 142);
+            transition: 0.3s ease;
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+        }
+    }
+
+}
