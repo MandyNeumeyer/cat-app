@@ -21,3 +21,33 @@ fetch the data from the [Cat Fact Api](https://catfact.ninja/fact)
 
 ![](./src/assets/cat-app.gif)
 
+---
+
+```javascript
+const MyComponent = props => {
+    const innerFunction = () => {
+        // do something!
+    };
+ 
+    useEffect(() => {
+        innerFunction();
+        // The effect calls innerFunction, hence it should declare it as a dependency
+        // Otherwise, if something about innerFunction changes (e.g. the data it uses), the effect would run the outdated version of innerFunction
+    }, [innerFunction]);
+};
+```
+
+Why is the above code problematic?
+
+The effect re-runs whenever innerFunction changes. It is re-created whenever MyComponent re-builds
+
+Because functions are objects and objects are reference types, that means that the effect will re-run for every render cycle
+
+That might still not be a huge problem, but it is, if innerFunction does something that causes MyComponent to re-build (i.e. if it either does something that changes the props or the state).
+
+Now, you would have an infinite loop!
+
+useCallback() helps you prevent this.
+
+---
+
