@@ -36,18 +36,7 @@ const MyComponent = props => {
     }, [innerFunction]);
 };
 ```
-
-Why is the above code problematic?
-
-The effect re-runs whenever innerFunction changes. It is re-created whenever MyComponent re-builds
-
-Because functions are objects and objects are reference types, that means that the effect will re-run for every render cycle
-
-That might still not be a huge problem, but it is, if innerFunction does something that causes MyComponent to re-build (i.e. if it either does something that changes the props or the state).
-
-Now, you would have an infinite loop!
-
-`useCallback()` helps you prevent this.
+[Why is the above code problematic?](https://infinitypaul.medium.com/reactjs-useeffect-usecallback-simplified-91e69fb0e7a3) 
 
 ---
 
