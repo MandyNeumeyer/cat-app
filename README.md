@@ -14,7 +14,7 @@ fetch the data from the cat fact api `'https://catfact.ninja/fact'`
 **hint**
 
 - to simulate the loading time, you could use `setTimeout()`
-- use `useCallback` for function dependencies in useEffect if you want to extract all of your fetch logic into its own function,to reuse the function whenever you want.
+- use `useCallback` for function dependencies in useEffect if you want to extract all of your fetch logic into its own function, to reuse the function whenever you want.
 
 
 
