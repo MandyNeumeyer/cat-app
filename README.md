@@ -47,7 +47,7 @@ That might still not be a huge problem, but it is, if innerFunction does somethi
 
 Now, you would have an infinite loop!
 
-useCallback() helps you prevent this.
+`useCallback()` helps you prevent this.
 
 ---
 
