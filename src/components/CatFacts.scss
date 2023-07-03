@@ -20,14 +20,14 @@
 
     button {
         padding: 0.5rem 1rem;
-        background-color: purple;
+        background-color: #5e4674;
         border-radius: 0.5rem;
         outline:none;
-        border: 2px solid rgb(36, 1, 36);
-        color: yellow;
+        color: #d3d3d3;
         font-weight: bold;
+        border: none;
         &:hover {
-            background-color: rgb(142, 7, 142);
+            background-color: #563971;
             transition: 0.3s ease;
             box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
         }
