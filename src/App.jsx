@@ -11,15 +11,15 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   const fetchData = useCallback(async () => {
-      try {
-        const response = await fetch('https://catfact.ninja/fact');
-        const catFacts = await response.json();
-        setData(catFacts);
-        setLoading(false);
-      } catch (e) {
-        console.log(e, e.message);
-      }
-    },[]);
+    try {
+      const response = await fetch('https://catfact.ninja/fact');
+      const catFacts = await response.json();
+      setData(catFacts);
+      setLoading(false);
+    } catch (e) {
+      console.log(e, e.message);
+    }
+  }, []);
 
   useEffect(() => {
 
@@ -32,21 +32,21 @@ function App() {
   }, [fetchData]);
 
 
-  return(
+  return (
     <div>
-      {loading 
-      ?<Loading/>
-      :<CatFacts 
-          data={data} 
+      {loading
+        ? <Loading />
+        : <CatFacts
+          data={data}
           fetchData={fetchData}
         />
       }
     </div>
   )
 
- }
+}
 
-  
+
 
 
 export default App
