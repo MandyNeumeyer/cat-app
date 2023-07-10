@@ -40,3 +40,5 @@ const MyComponent = props => {
 
 ---
 
+### Happy Coding! 
+
